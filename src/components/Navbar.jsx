@@ -3,15 +3,27 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import { useTheme } from '../context/Theme/ThemeContext'
 import { Menu, X } from 'lucide-react'
-import { BsSun, BsMoon } from 'react-icons/bs'
+import { BsSun, BsMoon, BsGithub, BsLinkedin } from 'react-icons/bs'
 
 const navLinks = [
-    {name: "Home", path: "/"},
-    {name: "About", path: "/about"},
+    {name: "About", path: "/"},
     {name: "Skills", path: "/skills"},
     {name: "Work", path: "/work"},
     {name: "Education", path: "/education"},
     {name: "Contact", path: "/contact"}
+]
+
+const socialLinks = [
+    {
+        name: 'GitHub',
+        href: 'https://github.com/AyeTheintKM',
+        icon: BsGithub,
+    },
+    {
+        name: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/ayetheintkyimoe',
+        icon: BsLinkedin,
+    },
 ]
 
 const Navbar = () => {
@@ -35,7 +47,7 @@ const Navbar = () => {
     <motion.nav initial={{ y: -60, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.7, ease: "easeOut" }}
-    className={`fixed top=0 left-0 w-full z-50 backdrop-blur-xl shadow-lg transition-all duration-500 ${navbarBg}`}>
+    className={`fixed top-0 left-0 w-full z-50 backdrop-blur-xl shadow-lg transition-all duration-500 ${navbarBg}`}>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 sm:px-6 py-3 sm:py-4 overflow-x-hidden">
             <motion.div
                 whileHover={{ scale: 1.08 }}
@@ -89,6 +101,27 @@ const Navbar = () => {
             </ul>
 
             <div className="flex items-center gap-2 sm:gap-3 mt-2 md:mt-0">
+                <div className="flex items-center gap-2">
+                    {socialLinks.map(({ name, href, icon: Icon }) => (
+                        <motion.a
+                            key={name}
+                            href={href}
+                            target="_blank"
+                            rel="noreferrer"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className={`p-2 rounded-lg transition-all duration-300 flex items-center justify-center cursor-pointer
+                                ${theme === "dark"
+                                    ? 'text-blue-300 hover:bg-blue-900'
+                                    : 'text-blue-700 hover:bg-blue-100'
+                                }`}
+                            aria-label={name}
+                        >
+                            <Icon size={18} />
+                        </motion.a>
+                    ))}
+                </div>
+
                 <motion.button
                     onClick={toggleTheme}
                     whileTap={{ scale: 0.85, rotate: 20 }}
