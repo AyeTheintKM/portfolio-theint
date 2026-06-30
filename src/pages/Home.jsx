@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Download, ArrowDown } from 'lucide-react'
 import { SkillsInfo } from '../constants'
 import { RoleAnimator } from '../components/RoleAnimator'
+import Resume from '../assets/AyeTheintKyiMoe-software-developer.pdf'
 
 const allSkills = []
 const seen = new Set()
@@ -104,7 +105,7 @@ const Home = () => {
           className="mb-3 sm:mb-0"
         >
           <motion.a
-            href=""
+            href={Resume}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}

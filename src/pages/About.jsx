@@ -5,8 +5,8 @@ import profileImage from '../assets/profile.jpg'
 const facts = [
   { label: 'Based in', value: 'Singapore' },
   { label: 'Focus', value: 'Full-Stack Web' },
-  { label: 'Currently', value: 'Building & Learning' },
-  { label: 'Driven by', value: 'Clean Code' },
+  { label: 'Currently', value: 'Open to Roles' },
+  { label: 'Driven by', value: 'Solving Problems' },
 ]
 
 const About = () => {
@@ -73,7 +73,7 @@ const About = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-snug mb-8"
           >
-            Code is just the medium — solving real problems is the goal
+            Where messy requirements become working software
           </motion.h3>
 
           <motion.p

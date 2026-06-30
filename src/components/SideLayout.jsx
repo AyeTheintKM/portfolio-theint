@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useTheme } from '../context/Theme/ThemeContext'
 import { BsGithub, BsLinkedin, BsMoon, BsSun } from 'react-icons/bs'
 import { ExternalLink } from 'lucide-react'
+import Resume from '../assets/AyeTheintKyiMoe-software-developer.pdf'
 
 const navItems = [
   { label: 'ABOUT',     id: 'about'     },
@@ -130,12 +131,12 @@ const SideLayout = ({ children }) => {
 
         {/* Download CV */}
         <a
-          href=""
+          href={Resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-[10px] font-semibold tracking-widest text-gray-500 dark:text-zinc-500 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rotate-nav"
+          className="flex items-center gap-1 text-[12px] font-semibold tracking-widest text-gray-500 dark:text-zinc-500 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rotate-nav"
         >
-          <ExternalLink size={10} />
+          <ExternalLink size={14} />
           Download CV
         </a>
 
@@ -148,7 +149,7 @@ const SideLayout = ({ children }) => {
             aria-label="LinkedIn"
             className="text-gray-400 dark:text-zinc-600 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
           >
-            <BsLinkedin size={15} />
+            <BsLinkedin size={18} />
           </a>
           <a
             href="https://github.com/AyeTheintKM"
@@ -157,7 +158,7 @@ const SideLayout = ({ children }) => {
             aria-label="GitHub"
             className="text-gray-400 dark:text-zinc-600 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
           >
-            <BsGithub size={15} />
+            <BsGithub size={18} />
           </a>
         </div>
 
@@ -217,7 +218,7 @@ const SideLayout = ({ children }) => {
             </button>
           ))}
           <a
-            href=""
+            href={Resume}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-bold tracking-[0.18em] text-gray-400 dark:text-zinc-600 hover:text-gray-900 dark:hover:text-white transition-colors"
