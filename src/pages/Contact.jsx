@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone } from 'lucide-react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { FaWhatsapp } from 'react-icons/fa'
 
 const contactMethods = [
   {
@@ -15,6 +16,12 @@ const contactMethods = [
     value: '+65 90533299',
     href: 'tel:+6590533299',
     icon: Phone,
+  },
+  {
+    label: 'Whatsapp',
+    value: '+65 90533299',
+    href: 'tel:+6590533299',
+    icon: FaWhatsapp, 
   },
   {
     label: 'LinkedIn',
