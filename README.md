@@ -2,8 +2,6 @@
 
 A personal portfolio website showcasing my work as a full-stack developer — built with clean design, smooth motion, and a focus on shipping things that actually work.
 
-> Code is the medium. Solving real problems is the goal.
-
 [![Vercel](https://img.shields.io/badge/deployed%20on-vercel-black?logo=vercel)](#)
 [![React](https://img.shields.io/badge/built%20with-react-61DAFB?logo=react&logoColor=black)](#)
 [![Tailwind CSS](https://img.shields.io/badge/styled%20with-tailwindcss-38B2AC?logo=tailwind-css&logoColor=white)](#)
