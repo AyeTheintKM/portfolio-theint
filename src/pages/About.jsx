@@ -5,8 +5,8 @@ import profileImage from '../assets/profile.jpg'
 const facts = [
   { label: 'Based in', value: 'Singapore' },
   { label: 'Focus', value: 'Full-Stack Web' },
-  { label: 'Currently', value: 'Open to Roles' },
-  { label: 'Driven by', value: 'Solving Problems' },
+  { label: 'Currently', value: 'Building & Learning' },
+  { label: 'Driven by', value: 'Scalability & Performance' },
 ]
 
 const fadeUpVariant = {
@@ -63,7 +63,7 @@ const About = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-snug mb-8"
           >
-            Where messy requirements become working software
+            Code is the medium. Solving real problems is the goal
           </motion.h3>
 
           <motion.p
@@ -92,10 +92,10 @@ const About = () => {
                 variants={fadeUpVariant}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
               >
-                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400 dark:text-zinc-600 mb-1.5">
+                <p className="text-[10px] font-bold tracking-[0.14em] uppercase text-gray-400 dark:text-zinc-600 mb-1.5">
                   {fact.label}
                 </p>
-                <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-zinc-200">
+                <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-zinc-200 whitespace-nowrap">
                   {fact.value}
                 </p>
               </motion.div>
