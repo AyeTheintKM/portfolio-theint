@@ -9,6 +9,11 @@ const facts = [
   { label: 'Driven by', value: 'Solving Problems' },
 ]
 
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0 },
+}
+
 const About = () => {
   return (
     <section id="about" className="py-24 px-8 sm:px-16 lg:px-24">
@@ -23,7 +28,7 @@ const About = () => {
         About Me
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
         {/* Image — offset frame with floating accent */}
         <motion.div
@@ -31,9 +36,9 @@ const About = () => {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="md:col-span-4 relative"
+          className="lg:col-span-4 relative"
         >
-          <div className="relative w-full max-w-[280px] mx-auto md:mx-0">
+          <div className="relative w-full max-w-[280px] mx-auto lg:mx-0">
             {/* Background offset card */}
             <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl border border-gray-200 dark:border-white/10" />
             {/* Main image */}
@@ -44,26 +49,11 @@ const About = () => {
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-            {/* Floating badge */}
-            {/* <motion.div
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="absolute -bottom-5 -right-5 bg-white dark:bg-black border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 shadow-sm"
-            >
-              <p className="text-[9px] font-bold tracking-widest uppercase text-gray-400 dark:text-zinc-600">
-                Available For
-              </p>
-              <p className="text-xs font-semibold text-gray-900 dark:text-white mt-0.5">
-                Full-Time Roles
-              </p>
-            </motion.div> */}
           </div>
         </motion.div>
 
         {/* Content */}
-        <div className="md:col-span-8">
+        <div className="lg:col-span-8 min-w-0">
 
           {/* Big pull-quote line */}
           <motion.h3
@@ -94,7 +84,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-gray-200 dark:border-white/8"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-gray-200 dark:border-white/8"
           >
             {facts.map((fact) => (
               <motion.div
@@ -116,11 +106,6 @@ const About = () => {
       </div>
     </section>
   )
-}
-
-const fadeUpVariant = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0 },
 }
 
 export default About
