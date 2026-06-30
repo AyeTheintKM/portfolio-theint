@@ -26,10 +26,10 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-[100svh] sm:min-h-screen flex flex-col justify-center sm:justify-between px-8 sm:px-16 lg:px-24"
+      className="min-h-[calc(100svh-3.5rem)] sm:min-h-screen flex flex-col justify-between px-8 sm:px-16 lg:px-24"
     >
       <motion.div
-        className="sm:flex-1 flex flex-col justify-start sm:justify-center pt-0 sm:py-20"
+        className="flex-1 flex flex-col justify-center pt-0 sm:py-20"
         initial="hidden"
         animate="visible"
         variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
