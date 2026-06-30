@@ -1,60 +1,126 @@
-import { Download } from 'lucide-react'
 import React from 'react'
-import { Typewriter } from 'react-simple-typewriter'
+import { motion } from 'framer-motion'
 import profileImage from '../assets/profile.jpg'
+
+const facts = [
+  { label: 'Based in', value: 'Singapore' },
+  { label: 'Focus', value: 'Full-Stack Web' },
+  { label: 'Currently', value: 'Building & Learning' },
+  { label: 'Driven by', value: 'Clean Code' },
+]
 
 const About = () => {
   return (
-    <section className="py-4 px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-        <div className="md:w-2/3 text-center md:text-left mt-8 md:mt-0">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight text-gray-900 dark:text-white">
-            Hello, I am
-          </h1>
-          <h5 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight text-gray-900 dark:text-white">
-            Aye Theint Kyi Moe
-          </h5>
-          {/* Skills heading with typing effect */}
-          <h6 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-blue-700 dark:text-blue-300 leading-tight">
-            <span className="text-gray-700 dark:text-gray-300">
-              I am a&nbsp; 
-            </span>
-            <Typewriter
-              words={["Software Engineer", "Full Stack Developer"]}
-              loop={0}
-              cursor
-              cursorStyle="_"
-              typeSpeed={100}
-              deleteSpeed={50}
-              delaySpeed={500}
-              deleteDelay={2000}
-              cursorRenderer={cursor => <span className="text-[#8245ec]">{cursor}</span>}
-            ></Typewriter>
-          </h6>
-          {/* Add a brief description or tagline about yourself here */}
-          <p className="text-gray-400 dark:text-gray-300 text-base sm:text-lg md:text-lg mb-10 mt-8 leading-relaxed">
-            I am a passionate software engineer with a strong background in full-stack development. 
-            I enjoy creating innovative solutions and building applications that make a difference. 
-            My expertise lies in developing scalable web applications, and I am always eager to learn 
-            new technologies and improve my skills.
-          </p>
-          <a href="" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-700 dark:bg-blue-500 text-white dark:text-gray-900 transform font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-800 hover:scale-105 dark:hover:scale-105 dark:hover:bg-blue-600 transition duration-300">
-            <Download className="inline-block mr-2" />
-            <span>Download CV</span>
-          </a>
-        </div>
+    <section id="about" className="py-24 px-8 sm:px-16 lg:px-24">
 
-        {/* Right Side */}
-        <div className="md:w-1/3 flex justify-center md:justify-end">
-          <img src= {profileImage} alt="Profile" 
-          className="w-48 h-48 sm:w-56 sm:h-56 drop-shadow-[0_10px_20px_rgba(29,78,216,0.5)] rounded-full object-cover" />
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5 }}
+        className="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-400 dark:text-zinc-600 mb-16"
+      >
+        About Me
+      </motion.p>
+
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
+
+        {/* Image — offset frame with floating accent */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="md:col-span-4 relative"
+        >
+          <div className="relative w-full max-w-[280px] mx-auto md:mx-0">
+            {/* Background offset card */}
+            <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl border border-gray-200 dark:border-white/10" />
+            {/* Main image */}
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-zinc-900">
+              <img
+                src={profileImage}
+                alt="Aye Theint Kyi Moe"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            {/* Floating badge */}
+            {/* <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="absolute -bottom-5 -right-5 bg-white dark:bg-black border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 shadow-sm"
+            >
+              <p className="text-[9px] font-bold tracking-widest uppercase text-gray-400 dark:text-zinc-600">
+                Available For
+              </p>
+              <p className="text-xs font-semibold text-gray-900 dark:text-white mt-0.5">
+                Full-Time Roles
+              </p>
+            </motion.div> */}
+          </div>
+        </motion.div>
+
+        {/* Content */}
+        <div className="md:col-span-8">
+
+          {/* Big pull-quote line */}
+          <motion.h3
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-snug mb-8"
+          >
+            Code is just the medium — solving real problems is the goal
+          </motion.h3>
+
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+            className="text-sm sm:text-base text-gray-500 dark:text-zinc-400 leading-relaxed max-w-xl mb-12"
+          >
+            I'm a full-stack developer who enjoys the entire build process, from system design
+            down to the smallest UI detail. Outside of shipping projects, I'm usually picking up
+            new tools or refining things I've already built.
+          </motion.p>
+
+          {/* Facts grid */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-gray-200 dark:border-white/8"
+          >
+            {facts.map((fact) => (
+              <motion.div
+                key={fact.label}
+                variants={fadeUpVariant}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+              >
+                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400 dark:text-zinc-600 mb-1.5">
+                  {fact.label}
+                </p>
+                <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-zinc-200">
+                  {fact.value}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
         </div>
       </div>
     </section>
   )
+}
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0 },
 }
 
 export default About
