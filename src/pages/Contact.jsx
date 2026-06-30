@@ -7,8 +7,8 @@ import { FaWhatsapp } from 'react-icons/fa'
 const contactMethods = [
   {
     label: 'Email',
-    value: 'ayetheintkyimoe@gmail.com',
-    href: 'mailto:ayetheintkyimoe@gmail.com',
+    value: 'ayetheintkyimoe01@gmail.com',
+    href: 'mailto:ayetheintkyimoe01@gmail.com',
     icon: Mail,
   },
   {
@@ -20,7 +20,7 @@ const contactMethods = [
   {
     label: 'Whatsapp',
     value: '+65 90533299',
-    href: 'tel:+6590533299',
+    href: 'https://wa.me/6590533299',
     icon: FaWhatsapp, 
   },
   {
