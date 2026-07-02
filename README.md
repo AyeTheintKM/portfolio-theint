@@ -14,7 +14,7 @@ A personal portfolio website showcasing my work as a full-stack developer — bu
 
 This is my personal portfolio, built to showcase my projects, professional experience, education, and technical skills as a full-stack developer. It's designed to feel fast, clean, and a little personal — not just another templated dev portfolio.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category    | Tools                              |
 |-------------|-------------------------------------|
@@ -26,12 +26,12 @@ This is my personal portfolio, built to showcase my projects, professional exper
 
 ## Features
 
-- 📱 Fully responsive — mobile, tablet, and desktop
-- 🌗 Dark / light theme toggle
-- 🧭 Smooth scroll navigation with active-section highlighting
-- 🎬 Scroll-triggered animations throughout
-- 📄 One-click downloadable CV
-- 🧩 Sections: Home · About · Skills · Work Experience · Projects · Education · Contact
+-  Fully responsive — mobile, tablet, and desktop
+-  Dark / light theme toggle
+-  Smooth scroll navigation with active-section highlighting
+-  Scroll-triggered animations throughout
+-  One-click downloadable CV
+-  Sections: Home · About · Skills · Work Experience · Projects · Education · Contact
 
 ## Project Structure
 
