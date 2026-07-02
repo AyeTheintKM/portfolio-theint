@@ -1,4 +1,4 @@
-# 👋 Aye Theint Kyi Moe — Portfolio
+# Aye Theint Kyi Moe — Portfolio
 
 A personal portfolio website showcasing my work as a full-stack developer — built with clean design, smooth motion, and a focus on shipping things that actually work.
 
@@ -10,7 +10,7 @@ A personal portfolio website showcasing my work as a full-stack developer — bu
 
 ---
 
-## ✨ Overview
+## Overview
 
 This is my personal portfolio, built to showcase my projects, professional experience, education, and technical skills as a full-stack developer. It's designed to feel fast, clean, and a little personal — not just another templated dev portfolio.
 
@@ -24,7 +24,7 @@ This is my personal portfolio, built to showcase my projects, professional exper
 | Icons       | Lucide React, React Icons           |
 | Deployment  | Vercel                              |
 
-## 🚀 Features
+## Features
 
 - 📱 Fully responsive — mobile, tablet, and desktop
 - 🌗 Dark / light theme toggle
@@ -33,7 +33,7 @@ This is my personal portfolio, built to showcase my projects, professional exper
 - 📄 One-click downloadable CV
 - 🧩 Sections: Home · About · Skills · Work Experience · Projects · Education · Contact
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -76,11 +76,11 @@ npm run build
 
 Output is generated in the `dist/` folder.
 
-## ☁️ Deployment
+## Deployment
 
 Deployed on [Vercel](https://vercel.com) — every push to `main` triggers an automatic redeploy. 🚀
 
-## 📬 Contact
+## Contact
 
 - 💼 **LinkedIn:** [linkedin.com/in/ayetheintkyimoe](https://www.linkedin.com/in/ayetheintkyimoe)
 - 🐙 **GitHub:** [github.com/AyeTheintKM](https://github.com/AyeTheintKM)
